@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+#navbar .header{
+    padding-right:30px ;
+}
+
+#navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: #fdfdfd;
+    padding: 31px 104px;
+}
+#navbar .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    padding-right: 30px;
+}
+#navbar .nav-menu li{
+    font-size: 28px;
+    color: #807D7E;
+}
+#navbar .nav-menu .shop-text{
+    font-size: 28px;
+    color: #3C4242;
+}
+#navbar  .search-bar{
+    display: flex;
+    padding: 10px 30px;
+    gap: 10px;
+    background-color: #F6F6F6;
+    border-radius: 6px;
+    
+}
+#navbar .search-bar .input{
+    background-color: #F6F6F6 ;
+    display: flex;
+    font-size: 20px;
+    border: none;
+    align-items: center;
+}
+
+
+#navbar .navbar-right{
+    display: flex;
+    gap: 10px;
+    padding-left: 30px;
+}
+#navbar .navbar-right span{
+    display: flex;
+    align-items: center;
+    background-color: #F6F6F6;
+    padding: 15px 15px;
+    border-radius: 7px;
+}
+#spotlight{
+    
+    background-image:url("image/bg-1.jpg");
+    height: 103vh;  
+    width:100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
