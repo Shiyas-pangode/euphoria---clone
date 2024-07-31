@@ -920,8 +920,6 @@ display: flex;
     border-radius: 10px;
     border: 1.8px;
     border: 1.8px solid #BEBCBD;
-    
-
 }
 #feedback .wrapper .feedback-content .feedback-cards2{
     width: 396.87px;
@@ -930,8 +928,8 @@ display: flex;
     border-radius: 10px;
     border: 1.8px;
     border: 1.8px solid #BEBCBD
-
 }
+
 #feedback .wrapper .feedback-content .feedback-cards3{
     width: 396.87px;
     height: 292px;
@@ -951,7 +949,6 @@ display: flex;
 
 .feedback-content .feedback-card1 .feedback-image .stars{
     display:flex;
-    align-items: center;
 }
 .feedback-content .feedback-card1 .feedback-image .stars img{
     display: block;
