@@ -950,7 +950,8 @@ display: flex;
 }
 
 .feedback-content .feedback-card1 .feedback-image .stars{
-    display:flex
+    display:flex;
+    align-items: center;
 }
 .feedback-content .feedback-card1 .feedback-image .stars img{
     display: block;
