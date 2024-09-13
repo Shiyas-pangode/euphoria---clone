@@ -7,12 +7,7 @@
 }
 .open-sans-uniquifier {
     font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-  }
+}
 #navbar .header{
     padding-right:30px;
 }
@@ -23,6 +18,9 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 200;
     gap: 50px;
     background-color: #fdfdfd;
     padding: 31px 102px;
@@ -31,11 +29,17 @@
 #navbar .nav-menu {
     display: flex;
     list-style: none;
-    gap: 50px;
+    gap: 40px;
     padding-right: 30px;
+}
+#navbar .nav-menu li{
+    width: 41px;
 }
 #navbar .nav-menu .combos{
     display: flex;
+    
+    margin-right: 40px;
+    margin-left: 40px;
 }
 #navbar .dropdown {
     display: flex;
@@ -101,10 +105,11 @@
     color: #807D7E;
     font-size: 22px;
     font-weight: 500;
+    
 }
 #navbar .nav-menu .navmenu-text:hover{
     color: #070404;
-    font-weight: 500;
+    font-weight: 600;
 }
 #navbar .nav-menu .shop-text{
     font-size: 24px;
@@ -147,7 +152,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+    transition: background-image 0.5s ease-in-out;
 }
 #wrapper{
     width: 95%; 
@@ -155,7 +160,7 @@
     margin: 0 auto;
 }
 #spotlight .spotlight-text{
-    /* margin: 0px 38px; */
+    margin: 0px 38px;
 }
 
 
@@ -392,24 +397,50 @@
     color:#3C4242 ;
     width: 394px;
 }
-#new-arrival .arrival-content{
+ 
+#new-arrival .slider  .arrival-arrow-img{
     display: flex;
-    flex-wrap: wrap;
-    padding-top: 70px;
-    gap: 38.58px;
-}
-#new-arrival .arrival-content .arrival-arrow-img.arrow1{
-    cursor: pointer;
-}
-#new-arrival .arrival-content .arrival-arrow-img{
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    z-index: 100;
+    
+    
 }
-#new-arrival .arrival-content img{
+#new-arrival .slider  .arrival-arrow-img .left-arrow{
+    cursor: pointer;
+    z-index: 100;
+    
+}
+#new-arrival .slider  .arrival-arrow-img .right-arrow{
+    cursor: pointer;
+    position: absolute;
+}
+#new-arrival .slider .arrival-content img{
     display: block;
     width: 100%;
-    cursor: pointer;
+    position: relative;
+}
+#new-arrival .slider{
+    display: flex;
+    align-items:center;
+    overflow: hidden;
+    
+}
+#new-arrival .arrival-content {
+    display: flex;
+    padding-top: 70px;
+    gap: 38.58px;
+    transition: transform 0.8s ease-in-out;
+    /* width: 100%; */
+    width: calc(2 * 262.81px + 38.58px);
+    align-items: center;
+    padding-left: 1210px;
+    padding-right: 0px;
+    margin: 0px;
+    justify-content: center;
+}
+.arrival-content .arrival-card-content{
+    min-width: 262.81px;
 }
 .arrival-content .arrival-card-content .arrival-image{
     width: 262.81px;
@@ -430,9 +461,10 @@
     margin-bottom: 100px;
 }
 .wrapper{
-    width: 85%; 
+    width: 82%; 
     max-width: 1280px; 
     margin: 0 auto;
+    overflow: hidden;
 }
 #advertisement .wrapper .advertisement-content{
     
@@ -718,7 +750,7 @@ display: flex;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 36px;
     padding-top: 50px;
 }
 
@@ -799,7 +831,7 @@ display: flex;
 .wrapper .light-content .light-image .span .image-whitespace{
     width: 32.36px;
     height: 32.36px;
-    background-color: #FFFFFF;
+    background-color:#fff;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -810,26 +842,41 @@ display: flex;
 .light-content .light-image .image-whitespace .wishlist img{
    display: block;
    width: 100%;
+   cursor: pointer;
+   mask-image: url('image/wishlist.svg');
+   -webkit-mask-image: url('image/wishlist.svg');
+   /* mask-size: contain;
+   mask-repeat: no-repeat;
+   -webkit-mask-size: contain;
+   -webkit-mask-repeat: no-repeat; */
     
 }
+
 .light-content .light-image1 .image-whitespace .wishlist img{
     display: block;
     width: 100%;
+    cursor: pointer;
+    mask-size: contain;
+    mask-position: center;
+
      
  }
 .light-content .light-image2 .image-whitespace .wishlist img{
     display: block;
     width: 100%;
+    cursor: pointer;
     
 }
 .light-content .light-image3 .image-whitespace .wishlist img{
     display: block;
     width: 100%;
+    cursor: pointer;
     
 }
 .light-content .light-image .image-whitespace img{
     display: block;
     width: 100%;
+    
 }
 .wrapper .light-content .image-text-arrow{
     display: flex;
@@ -882,7 +929,7 @@ display: flex;
     line-height: 16.8px;
     text-align: left;
     color: #807D7E;
-    font-family: sans-serif;;
+    font-family: sans-serif;
 }
 #feedback{
     padding-bottom: 100px;
@@ -1156,6 +1203,22 @@ display: flex;
     #new-arrival .arrival-content .arrow1 {
         display: none;
     }
+    #new-arrival .slider .arrival-arrow-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }    
+    #new-arrival .slider .arrival-arrow-img .right-arrow {
+        cursor: pointer;
+        position: absolute;
+        display: none;
+    }
+    #new-arrival .slider .arrival-arrow-img {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        z-index: 100;
+    }
 }
 @media(max-width:1400px){
     #navbar {
@@ -1191,13 +1254,13 @@ display: flex;
         justify-content: center;
         align-items: center;
     }
-    #new-arrival .arrival-content {
+    /* #new-arrival .arrival-content {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         padding-top: 30px;
         gap: 38.58px;
-    }
+    } */
 }
 @media(max-width:1280px){
     #navbar {
@@ -1235,7 +1298,6 @@ display: flex;
     }
     #new-arrival .arrival-content {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         padding-top: 20px;
@@ -1244,13 +1306,7 @@ display: flex;
     #new-arrival .arrival-content .arrival-arrow-img {
         display: none;
     }
-    #new-arrival .arrival-content {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding-top: 30px;
-        gap: 38.58px;
-    }
+   
     #spotlight .spotlight-text .text-valuepack {
         display: flex;
         flex-direction: column;
@@ -1281,12 +1337,7 @@ display: flex;
         display: flex;
         gap: 5px;
     }
-    #new-arrival .arrival-content {
-        display: flex;
-        flex-wrap: wrap;
-        padding-top: 30px;
-        gap: 38.58px;
-    }
+    
     .wrapper {
         width: 90%;
         max-width: 1480px;

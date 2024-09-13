@@ -1,0 +1,61 @@
+[
+    {
+        "id": 1,
+        "img":"image/img-5.jpg",
+        "title": "Shirts"
+    },
+
+
+    {
+        "id" : 2,
+        "img": "image/img-6.jpg",
+        "title": "Printed T-Shirts "
+    },
+
+
+    {
+        "id" : 3,
+        "img": "image/img-7.jpg",
+        "title": "Plain T-Shirts "
+    },
+
+
+    {
+        "id" : 4,
+        "img": "image/img-8.jpg",
+        "title": "Polo T-Shirts "
+    },
+
+
+    {
+        
+        "id" : 5,
+        "img": "image/img-9.jpg",
+        "title": "Hoodies & Sweetshirt "
+        
+    },
+
+
+    {
+        "id" : 6,
+        "img" : "image/img-10.jpg",
+        "title": "Jeans"
+    },
+
+
+    {
+        "id" : 7,
+        "img" : "image/Rectangle 22.png",
+        "title": "Activewear"
+    },
+
+
+    {
+        "id" : 8,
+        "img" : "image/img-11.jpg",
+        "title": "Boxers"
+    }
+
+
+
+]
