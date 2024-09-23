@@ -830,6 +830,14 @@
     display: block;
     width: 100%;
 }
+.wishlist-icon {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.wishlist-icon .active {
+    filter: invert(28%) sepia(95%) saturate(7507%) hue-rotate(355deg) brightness(92%) contrast(114%);
+}
 .wrapper .light-content .image-text-arrow{
     display: flex;
     justify-content: space-between;

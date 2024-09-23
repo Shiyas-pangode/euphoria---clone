@@ -101,6 +101,7 @@ document.addEventListener('DOMContentLoaded',() => {
             const redFilter = "invert(1) sepia(1) saturate(10000%) hue-rotate(0deg)";
             // const redFilter ="red"
            if (event.target.style.filter===redFilter){
+            
             event.target.style.filter="";
             // localStorage.setItem("imageFilter","");
            } else{
@@ -109,26 +110,20 @@ document.addEventListener('DOMContentLoaded',() => {
            }
         });
     });
-    const wishList = document.querySelectorAll(".wish-list ");
+       
+    const wishlistIcons = document.querySelectorAll('.wishlist-icon');
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const wishlistIcons = document.querySelectorAll('.wishlist-icon');
     
-    
-    wishList.forEach((like2)=>{
-        
-        like2.addEventListener("click",(event) =>{
-            const redFilter1 = "invert(1) sepia(1) saturate(10000%) hue-rotate(0deg)";
-            
-           if (event.target.style.filter===redFilter1){
-            alert("hi")
-            event.target.style.filter="";
-            
-           } else{
-            alert("hi")
-            event.target.style.filter=redFilter1;
-            
-           }
+        // Add a click event listener to each wishlist icon
+        wishlistIcons.forEach(function(icon) {
+            icon.addEventListener('click', function() {
+                // Toggle the "active" class on click
+                this.classList.toggle('active');
+            });
         });
     });
-   
     const backgrounds = [
         'url("image/bg-1.jpg")',
         'url("image/bg-2.jpg")',
@@ -150,38 +145,14 @@ document.addEventListener('DOMContentLoaded',() => {
     
     function updateBackground() {
         spotlight.style.backgroundImage = backgrounds[currentIndex1];
-    }
-    //fetch json data
-    // Step 1: Get the product ID from the URL
-   // product.js
-document.addEventListener('DOMContentLoaded', function () {
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = urlParams.get('id');
-    
-    fetch('products.json') // Assuming your JSON file is named products.json
-        .then(response => response.json())
-        .then(data => {
-            const product = data.find(p => p.id == productId);
+    };
 
-            if (product) {
-                document.getElementById('product-image').innerHTML = `<img src="${product.img}" alt="${product.title}">`;
-                document.getElementById('product-title').textContent = product.title;
-                document.getElementById('product-description').textContent = 'Product description goes here'; // Add your product description if available
-            } else {
-                // Handle case where product is not found
-                document.getElementById('product-details').innerHTML = '<p>Product not found.</p>';
-            }
-        })
-        .catch(error => console.error('Error fetching product data:', error));
 });
 
-    
-
 
     
 
 
-}); 
 
 
     

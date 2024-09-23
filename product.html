@@ -254,7 +254,7 @@
                         <div class="span">
                             <span class="image-whitespace">
                             <div class="wishlist">
-                                <img src="image/wishlist.svg" alt="image"/>
+                                <img class="wishlist-icon" src="image/wishlist.svg" alt="image"/>
                             </div>
                         </span></div>
                     </div>
@@ -264,7 +264,7 @@
                             <span><a class="explore" href="#">Jhanvi's  Brand</a></span>
                         </div>
                         <div class="light-arrow">
-                            <img  src="image/arrow-right.svg" alt="image"/>
+                            <img class="wishlist-icon" src="image/arrow-right.svg" alt="image"/>
                         </div>
                     </div>
                 </div>
@@ -273,7 +273,7 @@
                         <div class="span">
                             <span class="image-whitespace">
                             <div class="wishlist">
-                                <img src="image/wishlist.svg" alt="image"/>
+                                <img class="wishlist-icon" src="image/wishlist.svg" alt="image"/>
                             </div>
                         </span></div>
                     </div>
@@ -292,7 +292,7 @@
                         <div class="span">
                             <span class="image-whitespace">
                             <div class="wishlist">
-                                <img src="image/wishlist.svg" alt="image"/>
+                                <img class="wishlist-icon" src="image/wishlist.svg" alt="image"/>
                             </div>
                         </span></div>    
                     </div>
@@ -312,7 +312,7 @@
                         <div class="span">
                             <span class="image-whitespace">
                                 <div class="wishlist">
-                                    <img src="image/wishlist.svg" alt="image"/>
+                                    <img class="wishlist-icon" src="image/wishlist.svg" alt="image"/>
                                 </div>
                         </span></div>
                     </div>
@@ -415,5 +415,26 @@
         </div>
     </section>
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const wishlistIcons = document.querySelectorAll('.wishlist-icon');
+            wishlistIcons.forEach((like1)=>{
+        
+        like1.addEventListener("click",(event) =>{
+            const redFilter = "invert(1) sepia(1) saturate(10000%) hue-rotate(0deg)";
+            // const redFilter ="red"
+           if (event.target.style.filter===redFilter){
+            
+            event.target.style.filter="";
+            // localStorage.setItem("imageFilter","");
+           } else{
+            event.target.style.filter=redFilter;
+            // localStorage.setItem("imageFilter",redFilter);
+           }
+        });
+    });
+});
+        
+    </script>
 </body>
 </html>
