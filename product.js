@@ -29,10 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const spotImg = document.querySelector(".spotmid-img");
 
-    // Retrieve the selected index from local storage
+    
     const selectedIndex = localStorage.getItem("selectedImageIndex");
         if (selectedIndex !== null) {
-            spotImg.style.backgroundImage = images[selectedIndex]; // Set the background image
+            spotImg.style.backgroundImage = images[selectedIndex]; 
         }
 
 
