@@ -19,45 +19,42 @@ document.addEventListener('DOMContentLoaded',() => {
     function resetcolour() {
         allColour.forEach(allcolour =>{
             allcolour.style.borderColor="#fff"
-        })
-    }
-    function resetstyles(){
-        allsize.forEach(allsize  =>{
-            allsize.style.backgroundColor = "#fff";
-            allsize.style.color = "#3C4242";
         });
     }
+    // function resetstyles(){
+    //     allsize.forEach(allsize  => {
+    //         allsize.style.backgroundColor = "#fff";
+    //         allsize.style.color = "#3C4242";
+    //     });
+    // }
+    function resetstyles(excludeElement) {
+        allsize.forEach(allsize  => {
+            // Check if the current element is not the one that was clicked
+            if (allsize !== excludeElement) {
+                allsize.style.backgroundColor = "#fff";
+                allsize.style.color = "#3C4242";
+            }
+        });
+    }
+    
+    
     function handleClick(event) {
-        resetstyles();
-        if (event.target.classList.contains('card-size')) {
-            event.target.style.backgroundColor="black";
-            event.target.style.color = '#fff';
-        } else if (event.target.classList.contains('card-size1')) {
-            event.target.style.backgroundColor="black";
-            event.target.style.color="#fff";
-            event.size.style.backgroundColor="#fff";
-        }else if (event.target.classList.contains('card-size2')) {
-            event.target.style.backgroundColor="black";
-            event.target.style.color="#fff";
-        }
-        else if (event.target.classList.contains('card-size3')) {
-            event.target.style.backgroundColor="black";
-            event.target.style.color="#fff";
-        }
-        else if (event.target.classList.contains('card-size4')) {
-            event.target.style.backgroundColor="black";
-            event.target.style.color="#fff";
+
+        if (event.target.classList.contains('card-size') ||
+            event.target.classList.contains('card-size1') ||
+            event.target.classList.contains('card-size2') ||
+            event.target.classList.contains('card-size3') ||
+            event.target.classList.contains('card-size4')) {
+    
+            resetstyles(event.target);
+    
+            event.target.style.backgroundColor = "black";
+            event.target.style.color = "#fff";
         }
     }
+    
     document.addEventListener('click',handleClick);
-    function changebackground() {
-        this.style.backgroundColor="black";
-        this.style.color="#fff"
-    }
-    size.forEach( (size) =>{
-        size.addEventListener('click',changebackground);
-        
-    });
+
 
     const leftButton = document.querySelector(".left-arrow");
     const rightButton = document.querySelector(".right-arrow");
@@ -73,6 +70,11 @@ document.addEventListener('DOMContentLoaded',() => {
             currentIndex--;
             updateSlider();
             rightButton.style.display="flex";
+        }else{(currentIndex === 0) 
+            currentIndex++ ;
+            updateSlider();
+            rightButton.style.display="none";
+
         }
               
     });
@@ -84,8 +86,8 @@ document.addEventListener('DOMContentLoaded',() => {
             
         }else {
             currentIndex=totalcard - visualcard;
-            updateSlider();
-           
+            currentIndex--;
+            updateSlider(); 
         }
     });
     
@@ -136,16 +138,44 @@ document.addEventListener('DOMContentLoaded',() => {
     document.querySelector('.slide-left').addEventListener('click', () => {
         currentIndex1 = (currentIndex1 === 0) ? backgrounds.length - 1 : currentIndex1 - 1;
         updateBackground();
+        
     });
     
     document.querySelector('.slide-right').addEventListener('click', () => {
         currentIndex1 = (currentIndex1 === backgrounds.length - 1) ? 0 : currentIndex1 + 1;
         updateBackground();
+        u
     });
     
     function updateBackground() {
         spotlight.style.backgroundImage = backgrounds[currentIndex1];
     };
+    // const images = [
+    //     'url("image/img-5.jpg")',
+    //     'url("image/img-6.jpg")',
+    //     'url("image/img-7.jpg")',
+    //     'url("image/img-8.jpg")',
+    //     'url("image/img-9.jpg")',
+    //     'url("image/img-10.jpg")',
+    //     'url("image/Rectangle 22.png")',
+    //     'url("image/img-11.jpg")'
+    // ];
+    
+    const explore = document.querySelectorAll(".explore");
+    
+    explore.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            localStorage.setItem("selectedImageIndex", index);
+            window.location.href = "product.html"; // Navigate to the single page
+        });
+    });
+    
+    
+    
+    
+    
+   
+    
 
 });
 

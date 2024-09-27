@@ -98,12 +98,18 @@
 }
 #spotlight .spotmid{
     width: 520px;
+   
     
 
 }
 #spotlight .spotmid .spotmid-img{
     width: 520px;
     height: 785px;
+    background-image: url("image/Rectangle\ 13.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: visible;
 
 }
 #spotlight .spotmid img{

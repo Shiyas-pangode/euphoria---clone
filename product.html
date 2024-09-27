@@ -72,7 +72,7 @@
         </div>
         <div class="spotmid">
             <div class="spotmid-img">
-                <img  id="product-image" src="image/Rectangle 13.png" alt="Product Image"/>
+                <!-- <img  id="product-image" src="image/Rectangle 13.png" alt="Product Image"/> -->
             </div>
         </div>
         <div class="spot-right">
@@ -114,7 +114,7 @@
                     <small class="bold-text">Select Size</small>
                     <small class="normal-text">Size Guide</small>
                     <div class="size-arrow">
-                        <img src="image/arrow-right.svg" alt="image"/>
+                        <img  src="image/arrow-right.svg" alt="image"/>
                     </div>
                 </div>
                 <div class="size">
@@ -415,26 +415,7 @@
         </div>
     </section>
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const wishlistIcons = document.querySelectorAll('.wishlist-icon');
-            wishlistIcons.forEach((like1)=>{
-        
-        like1.addEventListener("click",(event) =>{
-            const redFilter = "invert(1) sepia(1) saturate(10000%) hue-rotate(0deg)";
-            // const redFilter ="red"
-           if (event.target.style.filter===redFilter){
-            
-            event.target.style.filter="";
-            // localStorage.setItem("imageFilter","");
-           } else{
-            event.target.style.filter=redFilter;
-            // localStorage.setItem("imageFilter",redFilter);
-           }
-        });
-    });
-});
-        
-    </script>
+    <script src="product.js"></script>
+
 </body>
 </html>
