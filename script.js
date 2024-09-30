@@ -150,16 +150,6 @@ document.addEventListener('DOMContentLoaded',() => {
     function updateBackground() {
         spotlight.style.backgroundImage = backgrounds[currentIndex1];
     };
-    // const images = [
-    //     'url("image/img-5.jpg")',
-    //     'url("image/img-6.jpg")',
-    //     'url("image/img-7.jpg")',
-    //     'url("image/img-8.jpg")',
-    //     'url("image/img-9.jpg")',
-    //     'url("image/img-10.jpg")',
-    //     'url("image/Rectangle 22.png")',
-    //     'url("image/img-11.jpg")'
-    // ];
     
     const explore = document.querySelectorAll(".explore");
     
