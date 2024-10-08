@@ -159,6 +159,18 @@ document.addEventListener('DOMContentLoaded',() => {
             window.location.href = "product.html"; // Navigate to the single page
         });
     });
+
+
+     document.querySelector(".close-icon").addEventListener("click",()=>{
+        dropDown.style.display="none";
+     })
+    const dropDown = document.querySelector(".dropdown");
+    document.querySelector(".menubar").addEventListener("click",() =>{
+        dropDown.style.display="flex";
+        
+    })
+    d
+       
     
     
     
