@@ -1131,9 +1131,9 @@
     }
     #spotlight .spot-right .spotright-head {
         width: 100%;
-        font-size: 34px;
+        font-size: 24px;
         font-weight: 600;
-        line-height: 47.6px;
+        line-height: 27.6px;
     }
     #spotlight .spot-right .rating-section{
         flex-wrap: wrap;
@@ -1218,10 +1218,10 @@
     }
     #spotlight .spot-right .spotright-head {
         width: 100%;
-        font-size: 34px;
+        font-size: 24px;
         font-weight: 600;
-        line-height: 47.6px;
-        margin-top: 10px;
+        line-height: 27.6px;
+        margin-top: 6px;
     }
     #spotlight .spot-right .options {
         display: grid;
