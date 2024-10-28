@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded',() => {
     document.querySelector('.slide-right').addEventListener('click', () => {
         currentIndex1 = (currentIndex1 === backgrounds.length - 1) ? 0 : currentIndex1 + 1;
         updateBackground();
-        u
+        
     });
     
     function updateBackground() {
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded',() => {
         dropDown.style.display="flex";
         
     })
-    d
+    
        
     
     

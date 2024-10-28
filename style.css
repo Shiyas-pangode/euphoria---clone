@@ -20,7 +20,7 @@
     position: relative;
     position: sticky;
     top: 0;
-    z-index: 200;
+    z-index: 100;
     gap: 50px;
     background-color: #fdfdfd;
     padding: 31px 0px;
@@ -156,7 +156,7 @@
 }
 #wrapper{
     width: 95%; 
-    max-width: 14960px; 
+    max-width: 1280px; 
     margin: 0 auto;
 }
 #spotlight .spotlight-text{
@@ -431,7 +431,6 @@
     padding-top: 70px;
     gap: 38.58px;
     transition: transform 0.8s ease-in-out;
-    /* width: 100%; */
     width: calc(2 * 262.81px + 38.58px);
     align-items: center;
     padding-left: 1210px;
@@ -464,7 +463,7 @@
 }
 .wrapper{
     width: 82%; 
-    max-width: 1280px; 
+    max-width: 1448px; 
     margin: 0 auto;
     overflow: hidden;
 }
@@ -1219,7 +1218,7 @@ display: flex;
         display: flex;
         justify-content: left;
         align-items: center;
-        z-index: 100;
+        z-index: 200;
     }
     #new-arrival .slider{
         overflow: visible;
@@ -1259,13 +1258,11 @@ display: flex;
         justify-content: center;
         align-items: center;
     }
-    /* #new-arrival .arrival-content {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding-top: 30px;
-        gap: 38.58px;
-    } */
+    #new-arrival .arrival-content {
+        width: 100%;
+        padding-left: 0;
+        justify-content: space-around;
+    }
 }
 @media(max-width:1280px){
     #navbar {
@@ -1302,11 +1299,9 @@ display: flex;
         padding-top: 130px;
     }
     #new-arrival .arrival-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 20px;
-        gap: 38.58px;
+        width: 100%;
+        padding-left: 0;
+        justify-content: space-around;
     }
     #new-arrival .arrival-content .arrival-arrow-img {
         display: none;
@@ -1563,6 +1558,11 @@ display: flex;
         background-color: #fdfdfd;
         padding: 21px 0px  21px 20%;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #new-arrival .arrival-content {
+        /* flex-direction: column; */
+        gap: 20px;
+        padding-top: 40px;
     }
     #advertisement .advertisement-content .advertisement-img1 {
         background-image: url(image/bg-4.jpg);
@@ -1875,6 +1875,11 @@ display: flex;
         display: flex;
         justify-content: center;
     }
+    #new-arrival .arrival-content {
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 40px;
+    }
     #brands .brand-card .brandcard-content .brand-head {
         display: none;
     }
@@ -2044,6 +2049,9 @@ display: flex;
     #advertisement {
         margin-top: 50px;
         margin-bottom: 50px;
+    }
+    #new-arrival .slider .arrival-arrow-img{
+        display: none;
     }
     #products .wrapper .products-content {
         padding-top: 25px;
